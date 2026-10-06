@@ -7,7 +7,7 @@ This repository is my portfolio of projects in **Data Analytics** and **Business
 The work presented here is independently initiated and developed with the use of LLM tools. My primary contribution is not manual code production, but turning business problems into structured analytical solutions: decomposing problems, defining analytical tasks and requirements, designing analytical logic and data structures, setting interpretation boundaries, designing visualizations, validating results, and organizing iterative AI-assisted development.
 SQL and Python used in these projects may be generated with LLM tools and are not presented as code written manually by me. Technical artifacts are included to show how the designed analytical solutions were implemented and validated.
 
-## What this portfolio demonstrates
+# What this portfolio demonstrates
 
 - Business problem decomposition and analytical problem framing
 - Analytical methodology and data modeling
@@ -15,11 +15,13 @@ SQL and Python used in these projects may be generated with LLM tools and are no
 - Validation, quality control, and interpretation boundaries
 - Organization of AI-assisted analytical development
 
-## Portfolio structure
+# Portfolio structure
 
-Portfolio/
+```text
+portfolio/
 │
-├── README.md (this file)
+├── README.md
+├── README_RU.md
 ├── assets/
 │
 └── projects/
@@ -35,15 +37,18 @@ Portfolio/
     │
     ├── steppe-navigator/
     │   ├── README.md
-    │   └── cases/          # когда/если нужны
+    │   └── cases/          # when/if needed
     │
     └── some-smaller-project/
         ├── README.md
         ├── docs/
         └── assets/
+```
 
 Large projects may contain several independent analytical cases. Smaller projects may be presented directly without an additional case level.
-Projects
+
+# Projects
+
 ## AlphaLab Intelligence
 An independent analytical project focused on designing data-driven decision-support solutions.
 ### Search Demand
