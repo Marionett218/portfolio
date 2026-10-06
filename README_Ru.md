@@ -18,10 +18,11 @@ SQL и Python, используемые в этих проектах, могут
 
 ## Структура портфолио
 
-Portfolio/
+```text
+portfolio/
 │
 ├── README.md
-├── README_RU.md (этот файл)
+├── README_RU.md
 ├── assets/
 │
 └── projects/
@@ -37,12 +38,13 @@ Portfolio/
     │
     ├── steppe-navigator/
     │   ├── README.md
-    │   └── cases/          # при необходимости
+    │   └── cases/          # when/if needed
     │
     └── some-smaller-project/
         ├── README.md
         ├── docs/
         └── assets/
+```
 
 Крупные проекты могут содержать несколько самостоятельных аналитических кейсов. Небольшие проекты могут быть представлены напрямую, без дополнительного уровня cases.
 
