@@ -53,8 +53,8 @@ Large projects may contain several independent analytical cases. Smaller project
 An independent analytical project focused on designing data-driven decision-support solutions.
 #### Search Demand
 A Data Analytics / BI / Market Intelligence case focused on analyzing search-demand patterns, regional differences, keyword structure, and demand dynamics.
-The case includes interactive BI dashboards, analytical methodology, data-modeling decisions, validation logic, and selected technical artifacts.
+The case includes an interactive Tableau Public workbook, analytical methodology, data-modeling decisions, interpretation boundaries, and selected technical details.
 
-Public case materials are being prepared.
+[View the Search Demand case](projects/alphalab-intelligence/cases/search-demand/README.md)
 
 More projects and analytical cases will be added as the portfolio develops.
