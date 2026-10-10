@@ -1,4 +1,94 @@
 # Technical evidence — AlphaLab Search Demand
+>Find Russian text below
+
+[← Back to Search Demand case](../README.md)
+
+## 1. Purpose of this folder
+
+This folder contains a small, curated set of real technical files from the working AlphaLab Intelligence repository. It is not the full project source code and is not intended to reproduce the working repository inside the portfolio.
+
+The files were selected as technical evidence for decisions described in the Search Demand materials: aggregation semantics, growth calculations, redesign of the `mart` layer due to performance issues, generation of the synthetic DEV fixture, and automated checks. Each file demonstrates a different aspect of the implementation and is not included merely for completeness.
+
+## 2. How the technical implementation was created
+
+Most of the SQL, Python, and tests in this project were created with the help of ChatGPT, Codex, and other LLM tools. My role was to define the business and analytical task, determine data and metric semantics, choose architectural solutions, formulate constraints and acceptance criteria, run the implementation locally, and verify the results. I did not usually perform a full traditional line-by-line code review of the SQL/Python; quality was controlled through checks of the data structure, actual outputs, tests, independent reconciliations, and PostgreSQL/Tableau behavior.
+
+## 3. Technical evidence
+
+### `db/migrations/07_add_keyword_area_aggregation_flag.sql`
+
+**What it implements:**  
+Adds `include_in_area_aggregate` to the M:N relationship `keyword ↔ diagnostic_area` and updates area-level aggregation. The relationship can remain in the model while a specific keyword does not necessarily contribute to the aggregate for that diagnostic area. Keyword-level data are not removed.
+
+**Why this file is included:**  
+This is compact technical evidence of one of the key semantic boundaries in Search Demand: relationships between keywords and diagnostic areas are not a simple mutually exclusive classification. A full `query_count` may belong to several included areas, so diagnostic-area totals cannot be summed as components of a single market total.
+
+**Role of AI:**  
+The SQL implementation was prepared with LLM/Codex based on the agreed analytical rules and was then checked in the working database.
+
+---
+
+### `db/migrations/12_add_search_demand_keyword_growth_mv.sql`
+
+**What it implements:**  
+Creates `mart.search_demand_keyword_growth` — a `MATERIALIZED VIEW` for country-level keyword analysis. Regional values are first aggregated into a `country × keyword × month` series, after which three fixed horizons are calculated: the latest 3 months versus the previous 3 months, the latest 12 months versus the previous 12 months, and long-term CAGR between the first and latest 12-month levels.
+
+Result grain: `source × country × diagnostic_area × keyword × period_type`.
+
+**Why this file is included:**  
+This is the most substantive example of Search Demand calculation logic. It demonstrates an important project rule: country-level growth must not be calculated as an average of regional growth percentages. The same object was used for the “demand level × growth rate” analysis in Tableau. A separate full reconciliation was performed for all 498 rows against an independent recalculation from staging; no discrepancies were found in the key calculated fields.
+
+**Role of AI:**  
+The SQL was created by LLM/Codex; the analytical specification, interpretation of the metrics, verification criteria, and acceptance of the result were performed by the author.
+
+---
+
+### `db/migrations/08_add_search_demand_area_mart_view.sql`
+
+**What it implements:**  
+Creates the Tableau-oriented `mart.search_demand_area` with grain `source × region × period × diagnostic_area`. The mart is built directly from `staging.keywords_monthly` and the reference mapping rather than through a more general aggregation chain.
+
+**Why this file is included:**  
+This file confirms a real architectural redesign triggered by Tableau performance problems. Direct access to staging allowed PostgreSQL to apply filters by source and diagnostic area before expensive aggregation. For one control query, `yandex + Helminthiases`, execution time improved from approximately 819 ms to 86.8 ms. This is the result of one specific local measurement, not a claim that the entire system became nine times faster.
+
+**Role of AI:**  
+ChatGPT participated in investigating the cause and comparing architectural options; LLM/Codex prepared the SQL implementation. The author initiated the investigation after observing the issue in Tableau and verified the effect in the working system.
+
+---
+
+### `src/alphalab/synthetic/search_demand.py`
+
+**What it implements:**  
+The main Python module for the temporary DEV synthetic Search Demand fixture. It reads controlled inputs, uses reference geography/population/diagnostic areas, creates canonical keywords and mappings, deterministically distributes national Yandex Wordstat anchors across 83 regions, generates a related but distinct synthetic Google signal, and creates monthly facts in `staging.keywords_monthly`.
+
+The implementation supports dry-run by default, explicit `--apply`, checks for conflicting/partial state, and reconciliation of the result.
+
+**Why this file is included:**  
+This file shows how the project continued BI development in the absence of production regional Search Demand data without presenting synthetic data as measured market data. The current DEV fixture contains 1,128,800 rows and uses an artificially shifted 1920–1926 period to visually distinguish it from future live data.
+
+**Role of AI:**  
+The main Python code was created with LLM/Codex based on the author’s requirements for reproducibility, separation of real and synthetic data, and result verification.
+
+---
+
+### `tests/test_synthetic_search_demand.py`
+
+**What it implements:**  
+A dedicated test module accompanying the synthetic Search Demand generator.
+
+**Why this file is included:**  
+It confirms that the generator has a separate automated testing layer rather than relying only on visual inspection of the generated data. At the same time, this README does not attribute all project checks to this file: part of the control was performed separately through dry-run, reconciliation, and direct analysis of results in PostgreSQL/Tableau. In the final state, the overall Python test suite passed successfully; the generator was also rechecked with a dry-run returning `action=noop` and the expected 1,128,800 rows.
+
+**Role of AI:**  
+The tests were mostly created with LLM/Codex. The author defined the acceptance criteria, ran the checks locally, and analyzed the actual output.
+
+## 4. What this set does not demonstrate
+
+These five files are a curated sample of technical evidence, not the full AlphaLab Intelligence repository. They do not imply that the author manually wrote the presented SQL/Python or performed traditional line-by-line code review of the entire implementation.
+
+The complete analytical methodology, architecture, and AI-assisted development process are described separately in the portfolio materials. These files serve a narrower purpose: to demonstrate that the documented decisions have a real technical implementation and that the implementation was verified in the working project.
+
+# Technical evidence — AlphaLab Search Demand
 
 ## 1. Назначение этой папки
 
