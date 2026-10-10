@@ -4,6 +4,13 @@ Interactive BI case for analyzing search demand for diagnostic services across R
 
 [View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/evgeny.vinogradov/viz/AlphaLab_Public_Search_Demand/Regional_representation)
 
+## Case materials
+
+- [Architecture](assets/search_demand_architecture_en.png)
+- [Analytical design](docs/analytical_design_en_ru.md)
+- [AI-assisted development](../../docs/ai_assisted_development_en_ru.md)
+- [Technical evidence](technical/README.md)
+
 ## Business problem
 
 Search-volume data can provide an early signal of how interest in diagnostic services differs across regions and changes over time.
