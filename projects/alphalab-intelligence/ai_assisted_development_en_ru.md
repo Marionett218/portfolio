@@ -1,5 +1,7 @@
 # AI-assisted development — AlphaLab Intelligence
 
+[← Go to Search Demand case](../cases/search-demand/README.md)
+
 >Find Russian text below
 
 This document describes the principles of the AI-assisted process used for data analysis and visualization development in the AlphaLab Intelligence project. The examples below relate to Search Demand as the first analytical layer, but the principles apply to the project as a whole.  
