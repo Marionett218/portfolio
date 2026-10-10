@@ -1,6 +1,8 @@
 # Analytical Design — Search Demand
 >Find Russian text below
 
+[← Back to Search Demand case](../README.md)
+
 ## Document purpose
 
 Search Demand was designed as an analytical system, not simply as a set of visualizations:
