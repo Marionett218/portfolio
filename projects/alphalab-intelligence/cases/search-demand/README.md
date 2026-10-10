@@ -110,4 +110,3 @@ SQL and Python used in the project were produced with LLM assistance and are not
 
 The first public case — **Search Demand** — is published as an interactive Tableau Public workbook.
 
-Further portfolio materials will document selected methodology, data-model decisions, validation logic, and technical artifacts without exposing unnecessary working-project internals.
