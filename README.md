@@ -1,6 +1,6 @@
 # Evgeny Vinogradov — Data Analytics & BI Portfolio
 
-[Russian version her] | [Русская версия](README_Ru.md)
+[Russian version here] | [Русская версия](README_Ru.md)
 
 This repository is my portfolio of projects in **Data Analytics** and **Business Intelligence**.
 
