@@ -10,7 +10,7 @@ The current public implementation contains one completed case.
 
 ### [Search Demand](cases/search-demand/README.md)
 
-Analysis of search-demand patterns for diagnostic services across Russian regions, including regional differences, diagnostic-area dynamics, and keyword-level comparisons.
+A demonstration of search-interest analysis across diagnostic areas, regions, keywords, and time. The public dataset combines factual nationwide Yandex Wordstat observations with a disclosed synthetic regional allocation.
 
 The case includes an interactive Tableau Public workbook, analytical design documentation, architecture materials, and selected SQL/Python/test artifacts.
 
@@ -34,7 +34,7 @@ AlphaLab Intelligence — независимый портфолио-проект
 
 ### [Search Demand](cases/search-demand/README.md)
 
-Анализ поискового спроса на диагностические услуги в регионах России, включая региональные различия, динамику по направлениям диагностики и сравнение отдельных поисковых запросов.
+Демонстрационный анализ поискового интереса по диагностическим направлениям, регионам, ключевым словам и времени. Публичный набор объединяет фактические общероссийские наблюдения Yandex Wordstat и явно обозначенное синтетическое региональное распределение.
 
 Кейс включает интерактивный workbook Tableau Public, документацию по аналитическому проектированию, материалы по архитектуре и отобранные SQL/Python/test-артефакты.
 
