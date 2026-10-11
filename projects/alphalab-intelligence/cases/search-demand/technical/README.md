@@ -49,7 +49,7 @@ The SQL was created by LLM/Codex; the analytical specification, interpretation o
 Creates the Tableau-oriented `mart.search_demand_area` with grain `source × region × period × diagnostic_area`. The mart is built directly from `staging.keywords_monthly` and the reference mapping rather than through a more general aggregation chain.
 
 **Why this file is included:**  
-This file confirms a real architectural redesign triggered by Tableau performance problems. Direct access to staging allowed PostgreSQL to apply filters by source and diagnostic area before expensive aggregation. For one control query, `yandex + Helminthiases`, execution time improved from approximately 819 ms to 86.8 ms. This is the result of one specific local measurement, not a claim that the entire system became nine times faster.
+This file confirms a real architectural redesign triggered by Tableau performance problems. Direct access to staging allowed PostgreSQL to apply filters by source and diagnostic area before expensive aggregation. Repeated control queries and testing in Tableau showed a practical improvement in filter response time. The resulting performance was accepted as sufficient for the current prototype.
 
 **Role of AI:**  
 ChatGPT participated in investigating the cause and comparing architectural options; LLM/Codex prepared the SQL implementation. The author initiated the investigation after observing the issue in Tableau and verified the effect in the working system.
@@ -136,7 +136,7 @@ SQL был создан LLM/Codex; аналитическая постановк
 Создаёт Tableau-oriented `mart.search_demand_area` с grain `source × region × period × diagnostic_area`. Витрина строится напрямую из `staging.keywords_monthly` и reference mapping, а не через более общую цепочку агрегаций.
 
 **Почему файл здесь:**  
-Файл подтверждает реальную архитектурную переработку, вызванную проблемой производительности Tableau. Прямой доступ к staging позволил PostgreSQL применять фильтры по source и diagnostic area до тяжёлой агрегации. Для одного контрольного запроса `yandex + Helminthiases` зафиксировано улучшение примерно с 819 ms до 86.8 ms. Это результат конкретного локального измерения, а не утверждение о девятикратном ускорении всей системы.
+Файл подтверждает реальную архитектурную переработку, вызванную проблемой производительности Tableau. Прямой доступ к staging позволил PostgreSQL применять фильтры по source и diagnostic area до тяжёлой агрегации. Повторные контрольные запросы и проверка в Tableau показали практическое улучшение времени отклика фильтров. Итоговая производительность была принята как достаточная для текущего прототипа.
 
 **Роль AI:**  
 ChatGPT участвовал в разборе причины и вариантов архитектуры; LLM/Codex подготовил SQL-реализацию. Автор инициировал исследование после фактической проблемы в Tableau и проверял эффект на рабочей системе.

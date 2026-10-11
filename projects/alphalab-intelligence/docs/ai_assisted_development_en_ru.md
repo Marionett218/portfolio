@@ -96,7 +96,7 @@ ChatGPT helped examine the options and design the mart architecture, while Codex
 
 ### Verification
 
-After the changes, control queries were run again. For one recorded scenario, query execution time decreased from approximately 819 ms to 86.8 ms. After the SQL checks, the solution was tested again in Tableau as the final interface, where filter behavior was also visibly faster. The resulting behavior was accepted as sufficient for the current prototype.
+After the mart-layer redesign, repeated control queries and testing in Tableau showed a practical improvement in filter response time. The resulting performance was accepted as sufficient for the current prototype.
 
 ### Outcome
 
@@ -215,7 +215,7 @@ ChatGPT помог разобрать варианты и сформироват
 
 ### Проверка
 
-После изменений контрольные запросы были выполнены повторно. Для одного зафиксированного сценария время запроса снизилось примерно с 819 ms до 86.8 ms. После SQL-проверок решение снова проверялось в Tableau как конечном интерфейсе, где также работа фильтров была очевидно быстрее. Итоговое поведение было принято как достаточное для текущего прототипа.
+После переработки слоя витрин повторные контрольные запросы и проверка в Tableau показали практическое улучшение времени отклика фильтров. Итоговая производительность была принята как достаточная для текущего прототипа.
 
 ### Итог
 

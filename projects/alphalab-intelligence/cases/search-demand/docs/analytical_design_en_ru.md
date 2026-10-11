@@ -155,7 +155,7 @@ The resulting decision was:
 - create specialized `VIEW` and `MATERIALIZED VIEW` objects for reusable scenarios;
 - leave in Tableau only the logic that genuinely depends on interactive user choices: filters, ranking, TOP-N, and visual presentation.
 
-As an illustrative example, for one control query the execution time decreased from approximately **819 ms to 86.8 ms** after moving the heavy logic into a specialized mart.
+After the mart-layer redesign, repeated control queries and testing in Tableau showed a practical improvement in filter response time. The resulting performance was accepted as sufficient for the current prototype.
 
 **Author:** identified the performance problem, initiated the investigation, and proposed moving heavy calculations out of Tableau’s interactive path into specialized marts.
 
@@ -405,7 +405,7 @@ Country-level рост нельзя получать как среднее пр�
 - для повторно используемых сценариев создать специализированные `VIEW` и `MATERIALIZED VIEW`;
 - в Tableau оставить только логику, которая действительно зависит от интерактивного выбора пользователя: фильтры, ranking, TOP-N и визуальное представление.
 
-В качестве показательного примера, на одном контрольном запросе после переноса тяжёлой логики в специализированную витрину время выполнения снизилось примерно с **819 ms до 86.8 ms**.
+После переработки слоя витрин повторные контрольные запросы и проверка в Tableau показали практическое улучшение времени отклика фильтров. Итоговая производительность была принята как достаточная для текущего прототипа.
 
 **Автор:** заметил проблему производительности, инициировал проверку и предложил вынести тяжёлые расчёты из интерактивного Tableau-контура в специализированные витрины.
 
