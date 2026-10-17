@@ -23,15 +23,19 @@ portfolio/
 ├── README.md
 ├── README_Ru.md
 └── projects/
-    └── alphalab-intelligence/
+    ├── alphalab-intelligence/
+    │   ├── README.md
+    │   ├── docs/
+    │   └── cases/
+    │       └── search-demand/
+    │           ├── README.md
+    │           ├── assets/
+    │           ├── docs/
+    │           └── technical/
+    └── steppe-navigator/
         ├── README.md
-        ├── docs/
-        └── cases/
-            └── search-demand/
-                ├── README.md
-                ├── assets/
-                ├── docs/
-                └── technical/
+        ├── README_Ru.md
+        └── assets/
 ```
 
 The structure supports additional projects and cases as they reach a sufficiently complete and verifiable state. Large projects can contain several independent cases, while smaller projects can be presented directly at the project level.
@@ -51,5 +55,13 @@ A Data Analytics / BI / Market Intelligence case showing how search-interest dat
 The case includes an interactive Tableau Public workbook, analytical design documentation, data-modeling decisions, interpretation boundaries, and selected technical evidence.
 
 [View the Search Demand case](projects/alphalab-intelligence/cases/search-demand/README.md)
+
+### STEPPE Navigator
+
+A public-sector Data Analytics / BI project based on a regional career-guidance pilot in Mangystau Region, Kazakhstan. The published analytical cohort contains **40,168 students in grades 8–11 from 148 public schools**, around **86%** of the estimated target group.
+
+The Tableau dashboards examine pilot delivery, plans after school, differences across territories and grades, certainty of educational choice, and potential educational migration. The project focuses on analytical exploration and management use while making its cohort, interpretation, privacy, and AI-assistance boundaries explicit.
+
+[View the STEPPE Navigator project](projects/steppe-navigator/README.md)
 
 More projects and analytical cases will be added as the portfolio develops.
