@@ -69,7 +69,7 @@ Shows the response structure for the question “Which occupations do you know?�
 
 ## Selected observations from the pilot
 
-Unless stated otherwise, the following results describe the full published cohort with all districts and grades selected:
+The following results describe the full published cohort with all districts and grades selected:
 
 - Among students planning to attend university, **56.0%** intended to study in another region of Kazakhstan and **14.4%** abroad; **15.2%** intended to remain in Mangystau, while **14.4%** had not selected a study location. Among students planning to attend college, the corresponding shares were **33.0%**, **6.8%**, **42.1%**, and **18.0%**. The difference makes educational migration a material management question, especially for university-oriented students.
 - Patterns varied across territories. University orientation was **11.46 percentage points above** the regional average in Mangystau District and **10.74 pp above** in Tupkaragan District, while Karakiya District was **7.01 pp below**. College orientation was above the regional average in Karakiya District (**+5.02 pp**) and Zhanaozen (**+4.99 pp**), and below it in Mangystau District (**−8.55 pp**) and Tupkaragan District (**−6.01 pp**). These contrasts identify locations for follow-up analysis. Understanding their causes could help the education authority identify local practices that may be transferable to neighbouring districts.
