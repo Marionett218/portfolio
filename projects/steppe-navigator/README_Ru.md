@@ -7,7 +7,7 @@
 Аналитическая выборка содержит завершённые сессии опросника **40 168 учащихся из 148 государственных школ**.
 
 <picture>
-  <img src="assets/steppe_navigator_dashboard_preview.jpg" alt="Превью дашборда STEPPE Navigator «Планы после школы»">
+  <img src="assets/steppe_navigator_dashboard_preview.jpg" alt="Превью дашборда STEPPE Navigator «Охват и ход диагностики»">
 </picture>
 
 [Открыть интерактивные дашборды на Tableau Public](https://public.tableau.com/app/profile/evgeny.vinogradov/viz/SteppeNavigator_Mangistauresults2026/sheet0_1)
