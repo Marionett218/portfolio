@@ -20,12 +20,13 @@ STEPPE Navigator is a career-guidance platform intended to support school career
 
 The original analysis was developed as part of pilot reporting. Its results were presented to public education stakeholders. The Tableau workbook published here was created afterwards as a portfolio demonstration and was not itself used in those presentations.
 
-The pilot produced a large operational dataset to explore four management questions:
+The pilot produced a large operational dataset to explore five management questions:
 
 - how career-guidance diagnostics progressed across districts and grades;
 - how students' plans after school differed by territory and grade;
 - how certain students were about their educational choices;
 - what students' intended study locations could indicate about future educational migration.
+- what free-text responses reveal about the range of occupations students can name.
 
 If the pilot develops into recurring work, the same analytical views could be refreshed from the beginning of a semester or academic year and used as a monitoring instrument.
 
@@ -41,6 +42,8 @@ The published solution is designed to help education managers investigate:
 - How many students had one preferred option, several options, or no defined choice?
 - Which criteria did students report considering when choosing a university or college?
 - Where did students intend to study: within Mangystau, elsewhere in Kazakhstan, or abroad?
+- What share of students named at least one recognized occupation, and which occupations were mentioned most often?
+- How did the distribution of the number of occupations named vary across grades?
 
 ## Dashboard structure
 
@@ -56,6 +59,14 @@ Compares post-school plans by grade and district. A separate view shows each dis
 
 Explores the certainty of educational choice, criteria students reported considering when choosing an institution, and intended study geography. Results can be filtered by district and grade.
 
+### Occupations named in free-text responses
+
+Shows the response structure for the question “Which occupations do you know?”, the occupations mentioned most often, and the distribution of the number named across grades.
+
+<picture>
+  <img src="assets/steppe_navigator_profession_awareness_dashboard_preview.png" alt="STEPPE Navigator Professions named in free-text responses dashboard preview">
+</picture>
+
 ## Selected observations from the pilot
 
 Unless stated otherwise, the following results describe the full published cohort with all districts and grades selected:
@@ -65,6 +76,8 @@ Unless stated otherwise, the following results describe the full published cohor
 - A single preferred option had been selected by **45.8%** of university-oriented students and **41.8%** of college-oriented students. The remaining respondents reported several alternatives or no defined choice: approximately **54%** of the university group and **58%** of the college group. This supports treating choice certainty as a useful monitoring indicator.
 - Within the university-oriented group, the share reporting one preferred option was higher in each successive grade: **36.0%** in grade 8, **41.2%** in grade 9, **52.9%** in grade 10, and **68.9%** in grade 11. This pattern is consistent with choice certainty increasing progressively in later grades. This is a cross-sectional comparison between grades; repeated collection of comparable data year after year would be needed to track change within the same cohort. College-oriented results for grades 10–11 are excluded from this comparison because the respondent counts in those subgroups are naturally low.
 - Abilities and interests were the most frequently reported consideration when choosing an institution: **69.6%** for the university group and **60.9%** for the college group. University-oriented students also selected the number of grants (**35.3%**) and institutional ranking (**34.5%**) more often than college-oriented students (**21.3%** and **21.4%**, respectively). The share who found it difficult to answer was more than twice as high among students planning to attend college: **16.5%** versus **7.6%**. Explaining this difference would require additional research.
+- A separate analytical cohort for the question “Which occupations do you know?” contains **39,286 students**: **24,845 (63.2%)** named at least one recognized occupation, **3,155 (8.0%)** mentioned fields of activity, **2,907 (7.4%)** provided a response that could not be reliably reconstructed, and **8,379 (21.3%)** did not answer. Among those who named an occupation, the most frequent mentions were teacher (**46.6%**), doctor (**37.1%**), police officer (**19.1%**), lawyer (**18.3%**), and dentist (**14.3%**). A student could name several occupations, so the ranking shares are not intended to sum to 100%.
+- The distribution of the number of occupations named varied across grades: in the published view, grade 11 students more often named a small number of occupations than students in younger grades. This is a descriptive observation that identifies a topic for further investigation and does not by itself explain the difference.
 
 The criteria question allowed multiple responses, so its percentages are not intended to sum to 100%. These observations identify management topics for further research and do not establish the causes of students' choices.
 
@@ -86,6 +99,10 @@ Intended study geography provides an early indicator of students' orientation to
 
 The share of students with a defined choice, several alternatives, or no clear option can serve as one monitoring indicator for long-term career-guidance work. With comparable cohorts and consistent measurement, it could support before-and-after assessment of a pilot intervention or comparison of different approaches across districts.
 
+### Assessing the breadth of occupational awareness
+
+The structure of free-text responses helps show how strongly students' awareness is concentrated around a limited set of familiar occupations. With repeated measurements and a stable method, this indicator could be used to monitor activities intended to broaden students' awareness of career paths.
+
 ## Data and analytical scope
 
 - Source: a working MySQL database dump from the STEPPE Navigator platform.
@@ -96,7 +113,8 @@ The share of students with a defined choice, several alternatives, or no clear o
 - Questionnaire reference data was used to interpret stored question and option identifiers.
 - Public school metadata used for district-level aggregation was compiled from open sources.
 - The public dashboards present results at district and grade level; individual-school results are not shown.
-- Free-text questionnaire responses are excluded from the published extract, and the table linking technical identifiers to personal records is absent from the public workbook.
+- A dictionary of **1,072 occupations and 5,400 observed spelling variants** was prepared to process the free-text responses. Matching was performed by script; roughly two hundred disputed variants were reviewed manually. Fuzzy matching was rejected as insufficiently reliable for this dataset.
+- Source free-text responses were processed in the local analytical environment and are not included in the published extract. The public dashboard contains derived categories and aggregated results. Names, contact details, and the table linking technical identifiers to personal records are absent from the public workbook; internal technical identifiers are used to link analytical records.
 
 ## Interpretation boundaries
 
@@ -107,6 +125,7 @@ The share of students with a defined choice, several alternatives, or no clear o
 - The current workbook contains one pilot period. Statements about change over time require repeated measurements using comparable definitions and cohorts.
 - Evaluation of a career-guidance intervention requires an agreed design, such as comparable baseline and follow-up measurements or a controlled pilot.
 - Assessing structural alignment with the labour market requires additional data on regional vacancies, shortage occupations, education capacity, enrolment, and graduate employment.
+- The open-ended question captures students' ability to spontaneously name occupations. It does not measure occupational interest, intended career choice, or the depth and accuracy of their knowledge. Its indicators use a separate analytical cohort of **39,286 students**, with a denominator that differs from the full project cohort of **40,168 students**.
 
 ## My role and AI-assisted workflow
 
@@ -116,20 +135,22 @@ My contribution included:
 - defining the pilot cohort and excluding training and test activity;
 - formulating the analytical questions and interpretation boundaries;
 - selecting the management views and comparison levels;
+- defining the free-text processing task, selecting the “dictionary → scripted matching” workflow, and making decisions on disputed classifications;
 - designing and assembling the Tableau dashboards through the Tableau interface;
 - reviewing results, investigating anomalies, and accepting the final analytical presentation.
 
-The work was performed in close collaboration with LLM tools. The LLM generated the more complex SQL transformations, supported schema exploration, proposed validation checks, and provided recommendations during visualization design. I defined the questions and requirements, supplied business context, reviewed outputs for plausibility and consistency, and made the analytical and presentation decisions. The project is presented as an AI-assisted analytical workflow; the SQL is not represented as manually authored code.
+The work was performed in close collaboration with LLM tools. The LLM generated the more complex SQL transformations, supported schema exploration, proposed validation checks, and provided recommendations during visualization design. For the free-text analysis, LLM/Codex assisted in building the dictionary and generated the matching script and complex SQL transformations. I formulated the task and classification rules, reviewed roughly two hundred disputed variants, decided against fuzzy matching, ran the queries in pgAdmin, and independently determined the dashboard's analytical and visual form. The project is presented as an AI-assisted analytical workflow; the SQL and program code are not represented as manually authored code.
 
 ## What this project demonstrates
 
 - Translating a public-sector management context into analytical questions
 - Cohort definition and interpretation of an unfamiliar operational database
 - Analytical comparison across districts and grades
+- Transformation of free-text responses into verifiable analytical categories
 - Tableau dashboard and information design
 - Clear separation of observed results, possible management use, and future analytical extensions
 - Responsible disclosure of sampling, causal, migration, and AI-assistance boundaries
 
 ## Current status
 
-The three-dashboard Tableau Public workbook is published as a retrospective demonstration of the 2026 pilot. The next analytical layer could connect repeated career-guidance measurements with regional education capacity and labour-market demand.
+The four-dashboard Tableau Public workbook is published as a retrospective demonstration of the 2026 pilot. The fourth dashboard adds an analysis of occupations named in free-text responses. The next analytical layer could connect repeated career-guidance measurements with regional education capacity and labour-market demand.

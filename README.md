@@ -60,7 +60,7 @@ The case includes an interactive Tableau Public workbook, analytical design docu
 
 A public-sector Data Analytics / BI project based on a regional career-guidance pilot in Mangystau Region, Kazakhstan. The published analytical cohort contains **40,168 students in grades 8–11 from 148 public schools**, around **86%** of the estimated target group.
 
-The Tableau dashboards examine pilot delivery, plans after school, differences across territories and grades, certainty of educational choice, and potential educational migration. The project focuses on analytical exploration and management use while making its cohort, interpretation, privacy, and AI-assistance boundaries explicit.
+The Tableau dashboards examine pilot delivery, plans after school, differences across territories and grades, certainty of educational choice, potential educational migration, and students' occupational awareness based on classified free-text responses. The project focuses on analytical exploration and management use while making its cohort, interpretation, privacy, and AI-assistance boundaries explicit.
 
 [View the STEPPE Navigator project](projects/steppe-navigator/README.md)
 
