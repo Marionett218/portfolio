@@ -81,7 +81,7 @@ The following results describe the full published cohort with all districts and 
 
 The criteria question allowed multiple responses, so its percentages are not intended to sum to 100%. These observations identify management topics for further research and do not establish the causes of students' choices.
 
-## How the analysis can support management
+## How the results can support education management
 
 ### Monitoring career-guidance delivery
 
