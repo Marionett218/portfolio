@@ -10,8 +10,7 @@ The analytical cohort contains completed questionnaire sessions for **40,168 stu
   <img src="assets/steppe_navigator_dashboard_preview.jpg" alt="STEPPE Navigator Coverage and diagnostic progress dashboard preview">
 </picture>
 
-[View the interactive dashboards on Tableau Public]
-(https://public.tableau.com/app/profile/evgeny.vinogradov/viz/EN-SteppeNavigator_Mangistauresults2026/OccupationsNamed)
+[View the interactive dashboards on Tableau Public](https://public.tableau.com/app/profile/evgeny.vinogradov/viz/EN-SteppeNavigator_Mangistauresults2026/OccupationsNamed)
 
 The dashboards are presented in Russian because they were designed around the language and terminology used by the regional education stakeholders and the source questionnaire.
 
