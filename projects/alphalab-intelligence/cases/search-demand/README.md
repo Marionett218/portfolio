@@ -5,7 +5,7 @@
 Interactive BI case for analyzing search demand for diagnostic services across Russian regions.
 
 <picture>
-  <img src="assets/search_demand_dashboard_preview.png" alt="Search Demand dashboard preview">
+  <img src="assets/search_demand_dashboard_preview_EN.png" alt="Search Demand dashboard preview">
 </picture>
 
 [View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/evgeny.vinogradov/viz/AlphaLabSearchDemand-English/RegionalSearchDemand))
