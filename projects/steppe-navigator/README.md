@@ -7,7 +7,7 @@ Interactive BI project based on a regional career-guidance pilot conducted in Ma
 The analytical cohort contains completed questionnaire sessions for **40,168 students from 148 public schools**.
 
 <picture>
-  <img src="assets/steppe_navigator_dashboard_preview_EN.jpg" alt="STEPPE Navigator Coverage and diagnostic progress dashboard preview">
+  <img src="assets/steppe_navigator_dashboard_preview_EN.png" alt="STEPPE Navigator Coverage and diagnostic progress dashboard preview">
 </picture>
 
 [View the interactive dashboards on Tableau Public](https://public.tableau.com/app/profile/evgeny.vinogradov/viz/EN-SteppeNavigator_Mangistauresults2026/OccupationsNamed)
