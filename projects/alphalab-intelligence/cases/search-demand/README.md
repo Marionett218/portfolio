@@ -8,7 +8,7 @@ Interactive BI case for analyzing search demand for diagnostic services across R
   <img src="assets/search_demand_dashboard_preview.png" alt="Search Demand dashboard preview">
 </picture>
 
-[View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/evgeny.vinogradov/viz/AlphaLab_Public_Search_Demand/Regional_representation)
+[View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/evgeny.vinogradov/viz/AlphaLabSearchDemand-English/RegionalSearchDemand))
 
 *The dashboard is presented in Russian because the case analyzes Russian-language search behavior in the Russian market.*
 
